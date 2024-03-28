@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Amplify } from 'aws-amplify';
 import { uploadData } from 'aws-amplify/storage';
 import { withAuthenticator } from '@aws-amplify/ui-react';
-// eslint-disable-next-line import/no-unresolved
 import '@aws-amplify/ui-react/styles.css';
 import config from './amplifyconfiguration.json';
 import Swal from 'sweetalert2';

@@ -4,6 +4,7 @@ import { uploadData } from 'aws-amplify/storage';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import config from './amplifyconfiguration.json';
+import Swal from 'sweetalert2';
 
 Amplify.configure(config);
 
@@ -30,11 +31,14 @@ function App({ signOut, user }) {
             accessLevel: 'guest'
           }
         }).result;
+        Swal.fire('Uploaded!', 'Your file has been uploaded.', 'success');
         console.log('Succeeded: ', result);
       } catch (error) {
+        Swal.fire('Error', 'Error uploading file. Please try again.', 'error');
         console.log('Error : ', error);
       }
     } catch (error) {
+      Swal.fire('Error', 'Error uploading file. Please try again.', 'error');
       console.error('Error uploading file: ', error);
       alert('Error uploading file. Please try again.');
     }

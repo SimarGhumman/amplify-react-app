@@ -9,7 +9,7 @@ frontend:
         - npm run build
   artifacts:
     # Specify the directory where your build artifacts are located
-    baseDirectory: /dist
+    baseDirectory: /build
     files:
       - '**/*'
   cache:

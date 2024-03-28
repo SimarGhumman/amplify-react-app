@@ -1,0 +1,13 @@
+{
+  "resourceName": "amplifybucket",
+  "policyUUID": "d8969894",
+  "bucketName": "amplifyreactapp",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ"
+  ],
+  "triggerFunction": "S3Triggerf9f8d439",
+  "groupAccess": {}
+}

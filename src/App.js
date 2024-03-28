@@ -41,12 +41,17 @@ function App({ signOut, user }) {
   };
 
   return (
-    <>
-      <h1>Hello {user.username}</h1>
-      <input type="file" onChange={handleFileInputChange} />
-      <button onClick={handleFileUpload}>Upload Image</button>
-      <button onClick={signOut}>Sign out</button>
-    </>
+    <div className="app-container">
+      <header>
+        <h1>Welcome {user.username} to E-Bike Dashboard</h1>
+      </header>
+      <div className="upload-section">
+        <input type="file" id="file-input" className="file-input" onChange={handleFileInputChange} />
+        <label htmlFor="file-input" className="file-input-label">Choose a file</label>
+        <button className="upload-button" onClick={handleFileUpload}>Upload Image</button>
+        <button className="signout-button" onClick={signOut}>Sign out</button>
+      </div>
+    </div>
   );
 }
 
